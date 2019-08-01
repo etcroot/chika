@@ -37,6 +37,7 @@ exports.run = (client, message, args) => {
         .setDescription([`
         \`${config.prefix}anime\` → search anime on discord.
         \`${config.prefix}anime\` → search manga on discord.
+        \`${config.prefix}waifu\` → ~~search~~ waifu on discord.
         \`${config.prefix}moe\` → get random moe's.
         `])
         return message.channel.send(embed);
