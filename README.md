@@ -3,6 +3,12 @@
 # About Chika
 She's in heavy beta, pls don't use her yet ( ╥ω╥ )
 
+# Stuff she can do atm
+- Use mention as prefix.
+- Search for animu uwu
+  - manga coming soon... owo
+- Fetch cute anime girls (*・ω・)ﾉ
+
 # Future Plans
 - Dashboard
 - Add database
