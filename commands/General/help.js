@@ -23,11 +23,14 @@ module.exports = {
         \`${config.prefix}suggest\` → send a bot suggestion.
         \`${config.prefix}support\` → create a support ticket.
     `])
-        .addField('🎀 Misc Commands', `\`${config.prefix}help misc\``, true)
-        .addField('😂 Meme Commands', `\`${config.prefix}help meme\``, true)
-        .addField('🔧 Utility Commands', `\`${config.prefix}help nsfw\``, true)
-        .addField('🎵 Music Commands', `\`${config.prefix}help music\``, true)
-        .addField('Prefix Information', `Prefix: \`${config.prefix}\`\nYou can also mention ${client.user} to execute commands.`, false)
+        .addField('🎀 Misc', `\`${config.prefix}help misc\``, true)
+        .addField('😂 Meme', `\`${config.prefix}help meme\``, true)
+        .addField('🔧 Utility', `\`${config.prefix}help nsfw\``, true)
+        .addField('🎵 Music', `\`${config.prefix}help music\``, true)
+        .addField('🤝 Action', `\`${config.prefix}help actions\``, true)
+        .addField('🔨 Moderation', `\`${config.prefix}help moderation\``, true)
+        .addBlankField()
+        .addField('Prefix Information', `Prefix: \`${config.prefix}\`\nYou can also mention ${client.user} when using any commands except for the music module.`, false)
         .addField('❯ Useful Links', `[Website](${config.website}) | [Support Server](${config.supporturl}) | [Invite ${client.user.username}](https://discordapp.com/oauth2/authorize/?permissions=2146958847&scope=bot&client_id=${client.user.id}) | [Github](${config.github})`, false)
         return message.channel.send(embed);
     }
@@ -58,6 +61,28 @@ module.exports = {
     }
     // Sending misc help menu.
     if(command === 'utility') {
+        let embed = new Discord.RichEmbed()
+        .setTitle('Help Menu → Utility')
+        .setColor('#36393F')
+        .setFooter(`${client.user.username} | By: ${config.ownertag}`)
+        .setDescription([`
+        \`${config.prefix}reminder\` → set a reminder.
+        `])
+        return message.channel.send(embed);
+    }
+    // Sending actions help menu.
+    if(command === 'actions') {
+        let embed = new Discord.RichEmbed()
+        .setTitle('Help Menu → Utility')
+        .setColor('#36393F')
+        .setFooter(`${client.user.username} | By: ${config.ownertag}`)
+        .setDescription([`
+        \`${config.prefix}reminder\` → set a reminder.
+        `])
+        return message.channel.send(embed);
+    }
+    // Sending misc help menu.
+    if(command === 'moderation') {
         let embed = new Discord.RichEmbed()
         .setTitle('Help Menu → Utility')
         .setColor('#36393F')
