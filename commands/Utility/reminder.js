@@ -1,51 +1,49 @@
 const config = require('../../config.json');
 const Discord = require('discord.js');
-let chrono = require("chrono-node");
-var moment = require('moment');
+const ms = require('ms');
 
 module.exports = {
     name: 'reminder',
     description: 'set a reminder.',
     execute: async (client, message, args) => {
-        let messagez = args.join(' ');
-        if (messagez.length < 1) return message.channel.send('Incorrect format. !reminder <minutes> <message>');
-        return new Promise((resolve) => {
-          if (!isNaN(messagez[0])) {
-            const time = parseInt(messagez[0]);
-            if (time > 2880 || isNaN(time)) return message.channel.send('Maximum time is 2 days (2880 minutes)');
-            if (time < 1) return message.channel.send('Time must be at least 1 minute.');
-            setTimeout(() => {
-              message.reply(`Remember: ${messagez.split(' ').slice(1).join(' ')}!`);
-            }, time * 60000);
-            const minutemessage = time === 1 ? 'minute' : 'minutes';
-            return message.channel.send(`Reminding you in ${time} ${minutemessage}.`);
-          }
+      let reminderTime = args[0]; 
+        
+      if (!reminderTime) {
+          const embed = new Discord.RichEmbed()
+          .setColor("#36393F")
+          .setTitle('Invalid Syntax')
+          .setDescription("c!remind [time] [message]`\n\nUse 's' for seconds, 'm' for minutes, 'h' for hours and 'd' for days. If a measurement of time is not specified, the time will be in seconds.");
+          
+          message.channel.send(embed);
+      } 
       
-          const results = chrono.parse(messagez);
-          if (results.length === 0) return message.channel.send('Error parsing date. Try using format: !remind <minutes> <message>');
+      let reminder = args.slice(1).join(" "); 
       
-          let endTime = moment(results[0].start.date());
-          const currentTime = new moment();
-          let duration = moment.duration(endTime.diff(currentTime));
-          let minutes = Math.round(duration.asMinutes());
-      
-          if (minutes < 1) {
-            if (results[0].end) {
-              endTime = results[0].end.date();
-              duration = moment.duration(endTime.diff(currentTime));
-              minutes = duration.asMinutes();
-            }
-            if (minutes < 1) {
-              return message.channel.send('Time must be at least 1 minute.')
-            }
-          }
-          if (minutes > 2880) return message.channel.send('Maximum time is 2 days (2880 minutes)');
-      
-          setTimeout(() => {
-           message.reply(`Remember: "${messagez}"!`);
-          }, minutes * 60000);
-          const minutemessage = minutes === 1 ? 'minute' : 'minutes';
-          return message.channel.send(`Reminding you in ${minutes} ${minutemessage} for ${messagez}.`);
-        });
+      if (reminder) {
+          const success = new Discord.RichEmbed()
+              .setColor("#36393F")
+              .setTitle('**SUCCESS:**')
+              .setDescription(`I will send you a DM in **${reminderTime}**!`)
+              .setTimestamp();
+          
+          const fail = new Discord.RichEmbed()
+          .setColor("#36393F")
+              .setTitle('**FAIL:**')
+              .setDescription(`I couldn't send you a DM. Please check to see if you have direct messaging enabled.`)
+              .setTimestamp();
+          
+          message.channel.send(success);
+
+          setTimeout(function() {
+              let remindEmbed = new Discord.RichEmbed()
+              .setColor("#36393F")
+                  .addField('Reminder:', `${reminder}`)
+                  .setTimestamp();
+
+              message.author.send(remindEmbed)
+              .catch(() => message.channel.send(fail));
+              
+          }, ms(reminderTime));
       }
+}
 }
