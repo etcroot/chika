@@ -25,7 +25,7 @@ module.exports = {
     `])
         .addField('🎀 Misc', `\`${config.prefix}help misc\``, true)
         .addField('😂 Meme', `\`${config.prefix}help meme\``, true)
-        .addField('🔧 Utility', `\`${config.prefix}help nsfw\``, true)
+        .addField('🔧 Utility', `\`${config.prefix}help utility\``, true)
         .addField('🎵 Music', `\`${config.prefix}help music\``, true)
         .addField('🤝 Action', `\`${config.prefix}help actions\``, true)
         .addField('🔨 Moderation', `\`${config.prefix}help moderation\``, true)
@@ -42,7 +42,7 @@ module.exports = {
         .setFooter(`${client.user.username} | By: ${config.ownertag}`)
         .setDescription([`
         \`${config.prefix}anime\` → search anime on discord.
-        \`${config.prefix}anime\` → search manga on discord.
+        \`${config.prefix}manga\` → search manga on discord.
         \`${config.prefix}waifu\` → ~~search~~ waifu on discord.
         \`${config.prefix}moe\` → get random moe's.
         `])
