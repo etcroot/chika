@@ -20,7 +20,7 @@ exports.run = async (client, message, args) => {
             var anime = result[0]
 
             var embed = new Discord.MessageEmbed()
-                .setColor('#FF9D6E')
+                .setColor('#36393F')
                 .setAuthor(`${anime.titles.english ? anime.titles.english : search} | ${anime.showType}`, anime.posterImage.original)
                 .setDescription(anime.synopsis.replace(/<[^>]*>/g, '').split('\n')[0])
                 .addField('❯\u2000\Information', `•\u2000\**Japanese Name:** ${anime.titles.romaji}\n\•\u2000\**Age Rating:** ${anime.ageRating}\n\•\u2000\**NSFW:** ${anime.nsfw ? 'Yes' : 'No'}`, true)
