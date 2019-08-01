@@ -15,5 +15,6 @@
     "node": "NODE VERSION",
     "version": "BOT VERSION",
     "color": "BOT EMBED COLOR",
-    "guildchannel": "GUILD JOINS/LEAVES"
+    "guildchannel": "GUILD JOINS/LEAVES",
+    "ytkey": "YOUTUBE API KEY"
 }

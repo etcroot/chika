@@ -26,12 +26,12 @@ module.exports = {
         .addField('🎀 Misc Commands', `\`${config.prefix}help misc\``, true)
         .addField('😂 Meme Commands', `\`${config.prefix}help meme\``, true)
         .addField('🔧 Utility Commands', `\`${config.prefix}help nsfw\``, true)
-        .addField('🔞 NSFW Commands', `\`${config.prefix}help nsfw\``, true)
+        .addField('🎵 Music Commands', `\`${config.prefix}help music\``, true)
         .addField('Prefix Information', `Prefix: \`${config.prefix}\`\nYou can also mention ${client.user} to execute commands.`, false)
         .addField('❯ Useful Links', `[Website](${config.website}) | [Support Server](${config.supporturl}) | [Invite ${client.user.username}](https://discordapp.com/oauth2/authorize/?permissions=2146958847&scope=bot&client_id=${client.user.id}) | [Github](${config.github})`, false)
         return message.channel.send(embed);
     }
-    // Sending interactive help menu.
+    // Sending misc help menu.
     if(command === 'misc') {
         let embed = new Discord.RichEmbed()
         .setTitle('Help Menu → Misc')
@@ -67,23 +67,25 @@ module.exports = {
         `])
         return message.channel.send(embed);
     }
-    // Sending NSFW help menu.
-    if(command === 'nsfw') {
-        let embednotnsfw = new Discord.RichEmbed()
-        .setTitle('NSFW Error')
-        .setDescription('You can only use this in a NSFW channel.')
-        .setColor('#363942')
-
-         if(!message.channel === message.channel.nsfw) {
-             return message.channel.send(embednotnsfw);
-         }
-
+    // Sending music help menu.
+    if(command === 'music') {
         let embed = new Discord.RichEmbed()
-        .setTitle('Help Menu → NSFW')
+        .setTitle('Help Menu → Music')
         .setColor('#36393F')
         .setFooter(`${client.user.username} | By: ${config.ownertag}`)
         .setDescription([`
-        -- soon --
+        \`${config.prefix}play\` → play music through url or search term.
+        \`${config.prefix}pause\` → pause the current audio.
+        \`${config.prefix}resume\` → resume the paused audio.
+        \`${config.prefix}stop\` → stop the current audio & clear queue.
+        \`${config.prefix}skip\` → skip the current audio.
+        \`${config.prefix}leave\` → leave the voice channel & clear queue.
+        \`${config.prefix}loop\` → loop through the queue.
+        \`${config.prefix}queue\` → check the current queue list.
+        \`${config.prefix}np\` → check what's currently playing.
+        \`${config.prefix}volume\` → set the audio volume.
+        \`${config.prefix}remove\` → remove a listing in the queue.
+        \`${config.prefix}clear\` → clear the queue.
         `])
         return message.channel.send(embed);
     }

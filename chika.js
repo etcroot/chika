@@ -1,7 +1,7 @@
 const { Client, Collection, Discord, RichEmbed } = require('discord.js');
 const client = new Client();
 const { readdir } = require('fs');
-const { prefix, token, guildchannel } = require('./config.json');
+const { prefix, token, guildchannel, ytkey, owner } = require('./config.json');
 const fs = require("fs");
 client.commands = new Collection();
 client.categories = new Collection();
@@ -18,6 +18,30 @@ readdir("./events", (err, files) => {
       client.on(eventName, event.bind(null, client));
     });
   });
+
+  // Music
+client.music = require("discord.js-musicbot-addon");
+
+client.music.start(client, {
+  youtubeKey: ytkey,
+  anyoneCanSkip: true,
+  help: {
+    enabled: false,
+  },
+  ownerOverMember: true,
+  inlineEmbeds: true,
+  musicPresence: false,
+  clearPresence: false,
+  messageHelp: true,
+  defVolume: "80",
+  botPrefix: prefix,
+  ownerID: owner,
+  cooldown: {
+    enabled: false,
+    timer: 1000,
+    exclude: ["volume","queue","pause","resume","np"]
+  }
+});
 
  
 // Guild Join Event
