@@ -36,6 +36,7 @@ exports.run = (client, message, args) => {
         .setFooter(`${client.user.username} | By: ${config.ownertag}`)
         .setDescription([`
         \`${config.prefix}anime\` → search anime on discord.
+        \`${config.prefix}anime\` → search manga on discord.
         \`${config.prefix}moe\` → get random moe's.
         `])
         return message.channel.send(embed);
