@@ -18,3 +18,6 @@ She's in heavy beta, pls don't use her yet ( ╥ω╥ )
 - workship chika
 
 Stay tuned for more updates, i literally started making her today and she's going to become a long term project. 	(─‿‿─)
+
+# other thingys
+please use the issue templates when requesting or reporting ~ヾ(・ω・)
