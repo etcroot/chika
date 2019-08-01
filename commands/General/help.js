@@ -63,7 +63,7 @@ module.exports = {
         .setColor('#36393F')
         .setFooter(`${client.user.username} | By: ${config.ownertag}`)
         .setDescription([`
-        -- soon --
+        \`${config.prefix}reminder\` → set a reminder.
         `])
         return message.channel.send(embed);
     }

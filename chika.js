@@ -79,15 +79,6 @@ client.on('message', async message => {
   const command = args.shift();
   if (!client.commands.has(command)) return;
   if (!message.content.startsWith(matchedPrefix)) return;
-  // Mention Help
-    if(message.content.toLowerCase() === `<@${client.user.id}>`){
-        let embed = new RichEmbed()
-        .addField("Prefix", `\`${prefix}\``, true)
-        .addField("Help", `\`${prefix}help\``, true)
-        .addField("Mention Help", `\`@Chika help\``, true)
-        .setColor('#36393F');
-        message.channel.send(embed);
-      };
     
     if (message.author.id === client.user.id) return;
     try {
