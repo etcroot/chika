@@ -13,5 +13,7 @@
     "supportchannel": "SUPPORT CHANNEL ID",
     "library": "LIBRARY",
     "node": "NODE VERSION",
-    "version": "BOT VERSION"
+    "version": "BOT VERSION",
+    "color": "BOT EMBED COLOR",
+    "guildchannel": "GUILD JOINS/LEAVES"
 }

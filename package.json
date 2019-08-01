@@ -5,8 +5,9 @@
   "main": "app.js",
   "dependencies": {
     "animequote": "^1.1.1",
-    "discord.js": "github:discordjs/discord.js",
-    "fs": "^0.0.1-security",
+    "discord.js": "^11.5.1",
+    "fs": "0.0.1-security",
+    "jimp": "^0.6.4",
     "kitsu.js": "^2.0.0",
     "node-fetch": "^2.6.0",
     "random-puppy": "^1.1.0"
