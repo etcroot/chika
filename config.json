@@ -1,0 +1,17 @@
+{
+    "token":"BOT TOKEN",
+    "prefix":"BOT PREFIX",
+    "owner":"OWNER ID",
+    "supporturl": "SUPPORT SERVER",
+    "website": "WEBSITE",
+    "github": "GITHUB",
+    "ownertag": "OWNER TAG",
+    "logo": "BOT LOGO FOR HELP",
+    "mainguild": "MAIN GUILD ID",
+    "bugreportchannel": "BUG CHANNEL ID",
+    "suggestchannel": "SUGGEST CHANNEL ID",
+    "supportchannel": "SUPPORT CHANNEL ID",
+    "library": "LIBRARY",
+    "node": "NODE VERSION",
+    "version": "BOT VERSION"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "chika",
+  "version": "1.0.2",
+  "description": "Another useless bot with useless features built with discord.js",
+  "main": "app.js",
+  "dependencies": {
+    "animequote": "^1.1.1",
+    "discord.js": "github:discordjs/discord.js",
+    "fs": "^0.0.1-security",
+    "kitsu.js": "^2.0.0",
+    "node-fetch": "^2.6.0",
+    "random-puppy": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etcroot/chika.git"
+  },
+  "keywords": [
+    "discord",
+    "discordbot",
+    "discordjs",
+    "discord.js"
+  ],
+  "author": "etcroot#4934",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/etcroot/chika/issues"
+  },
+  "homepage": "https://github.com/etcroot/chika#readme"
+}
