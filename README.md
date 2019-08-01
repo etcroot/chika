@@ -9,6 +9,7 @@ She's in heavy beta, pls don't use her yet ( ╥ω╥ )
   - manga ~~coming soon... owo~~ it's added uwu
 - Fetch cute anime girls (*・ω・)ﾉ
 - Added waifu command :eyes:
+- Now with music 	(｢• ω •)｢ (⌒ω⌒`)
 
 # Future Plans
 - Dashboard
