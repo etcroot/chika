@@ -18,7 +18,7 @@
     "moment": "^2.24.0",
     "ms": "^2.1.2",
     "node-fetch": "^2.6.0",
-    "opusscript": "0.0.6",
+    "opusscript": "0.0.8",
     "random-puppy": "^1.1.0",
     "sherlockjs": "^1.4.0",
     "twit": "^2.2.11"
