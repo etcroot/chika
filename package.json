@@ -11,7 +11,7 @@
     "discord.js": "^11.5.1",
     "discord.js-musicbot-addon": "^13.6.0",
     "ffmpeg": "0.0.4",
-    "ffmpeg-static": "^2.5.0",
+    "ffmpeg-static": "^4.2.8",
     "fs": "0.0.1-security",
     "jimp": "^0.6.4",
     "kitsu.js": "^2.0.0",
