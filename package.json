@@ -20,7 +20,7 @@
     "node-fetch": "^2.6.0",
     "opusscript": "0.0.8",
     "random-puppy": "^1.1.0",
-    "sherlockjs": "^1.4.0",
+    "sherlockjs": "^1.4.2",
     "twit": "^2.2.11"
   },
   "devDependencies": {},
